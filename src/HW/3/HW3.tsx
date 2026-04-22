@@ -21,7 +21,7 @@ export const HW3 = () => {
   };
 
   const handleSave = () => {
-    setTexts([...texts, currentText])   // ЗАСЕТАТЬ БЫ ТЕКСТ В texts И НЕ ПОТЕРЯТЬ НАПУТСТВИЕ ИЗ ПРОШЛОГО ВЕКА)
+    setTexts([currentText, ...texts])   // ЗАСЕТАТЬ БЫ ТЕКСТ В texts И НЕ ПОТЕРЯТЬ НАПУТСТВИЕ ИЗ ПРОШЛОГО ВЕКА)
     setCurrentText("")  // А ЗАТЕМ УБРАТЬ ЗА СОБОЙ В currentText
   };
 
@@ -35,7 +35,7 @@ export const HW3 = () => {
 
       <input id={'hw03-input'} type="text" value={currentText} onChange={handleChange} />
 
-      <button id={'hw03-button'} onClick={handleSave}>
+      <button id={'hw03-button'} onClick={handleSave}> // НЕ ХВАТАТЕТ ФУНКЦИИ
         Сохранить
       </button>
 
