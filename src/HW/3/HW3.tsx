@@ -21,21 +21,21 @@ export const HW3 = () => {
   };
 
   const handleSave = () => {
-    setTexts([currentText, ...texts])   // ЗАСЕТАТЬ БЫ ТЕКСТ В texts И НЕ ПОТЕРЯТЬ НАПУТСТВИЕ ИЗ ПРОШЛОГО ВЕКА)
-    setCurrentText("")  // А ЗАТЕМ УБРАТЬ ЗА СОБОЙ В currentText
+    setTexts([currentText, ...texts])
+    setCurrentText("")
   };
 
   return (
     <div id={'hw03'}>
       {currentText ? (
-        <h1 id={'hw03-text'}>ЗДЕСЬ ХОТЕЛОСЬ БЫ УВИДЕТЬ ВВОДИМЫЙ ТЕКСТ</h1>
+        <h1 id={'hw03-text'}>{currentText}</h1>
       ) : (
-        <h1 id={'hw03-default-text'}>Здесь появится новое дело</h1> // ничего не меняем, здесь все норм
+        <h1 id={'hw03-default-text'}>Здесь появится новое дело</h1>
       )}
 
       <input id={'hw03-input'} type="text" value={currentText} onChange={handleChange} />
 
-      <button id={'hw03-button'} onClick={handleSave}> // НЕ ХВАТАТЕТ ФУНКЦИИ
+      <button id={'hw03-button'} onClick={handleSave}>
         Сохранить
       </button>
 
